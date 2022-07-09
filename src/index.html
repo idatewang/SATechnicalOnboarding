@@ -1,116 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <main>
-        <article class="box">
-            <h1>Your Name</h1>
-            <div><a href="mailto:Duo.Wang@studentambassadors.com">Duo.Wang@studentambassadors.com</a></div>
-            
-            <section class="box">
-                <h2>
-                    <i class="fa fa-bullhorn" aria-hidden="true"></i>
-                    Social media
-                </h2>
-                <ul>
-                    <li><a href="https://github.com/idatewang">My github</a></li>
-                    <li><a href="https://linkedin.com/in/idatewang">My Linkedin</a></li>
-                </ul>    
-            </section>
-            
-            <section class="box">
-                <div class="education">
-                    <h2>
-                        <i class="fa fa-certificate" aria-hidden="true"></i>
-                        Texas A&M University
-                    </h2>
-                    <h3>B.S. in Computer Engineering</h3>
-                    <ul>
-                        <li>GPA: 3.7/4.0</li>
-                        <li>2018-2022</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="box">
-                <h2>
-                    <i class="fa fa-check" aria-hidden="true"></i>
-                    Skills
-                </h2>
-                <ul>
-                    <li>Python</li>
-                    <li>C++</li>
-                    <li>Unix/bash</li>
-                    <li>Git</li>
-                    <li>ARMv8</li>
-                    <li>Verilog</li>
-                    <li>Tcl/Tk</li>
-                </ul>
-            </section>
-        </article>
-        <article class="box">
-            <section class="box">
-                <h2>
-                    <i class="fa fa-briefcase" aria-hidden="true"></i>
-                    Experience
-                </h2>
-                <h3>Microsoft Learn Student Ambassador (Since 2021)</h3>
-                <h3>IEEE Texas A&M Corporate Officer (2019-2020)</h3>
-                <h3>IEEE Texas A&M Vice President (2020-2021)</h3>
-            </section>
-            <section class="box">
-                <h2>
-                    <i class="fa fa-building" aria-hidden="true"></i>
-                    Internships
-                </h2>
-
-                <h3>Texas Instruments</h3>
-                <ul>
-                    <li>Introduced an excel front-end in Python and VBA with regex and openpyxl libraries for ease of use</li>
-                    <li>Computed the logic path and clock latency from initiator module to target using dictionary and stack</li>
-                    <li>Analyzed the configs to add clock-converting interconnects and firewall protections to the logic path</li>
-                </ul>
-                <h3>Intel</h3>
-                <ul>
-                    <li>Designed a configurable log scanner in Python to process logs produced by EDA tool Modus</li>
-                    <li>Tailored the repository for future products to be simulated on FPGAs with bitbucket version control</li>
-                    <li>Consolidated the debug process for the team using UART collection and hardware telemetry reports</li>
-                </ul>
-                <h3>Texas Instruments</h3>
-                <ul>
-                    <li>Developed NAND SSD firmware tests on error correction, read disturb, SLC caching and data restore</li>
-                    <li>Achieved 200% speed-up from regression tests by optimizing data structures and memory buffers</li>
-                    <li>Utilized Modus and STA timing reports to generate and run AC Characterization path checks in Tcl</li>
-                </ul>
-            </section>
-            <section class="box">
-                <h2>
-                    <i class="fa fa-cubes" aria-hidden="true"></i>
-                    Projects
-                </h2>
-                
-                <h3>IEEE TamuMake</h3>
-                <ul>
-                    <li>Integrated Image Recognition with TensorFlow API on Raspberry Pi to identity and recycle trash</li>
-                    <li>Established the communication between Raspberry Pi and Arduino to open the lip for the right can</li>
-                    <li>Highlighted objects with a resizable frame and labeled the percent confidence with OpenCV API</li>
-                </ul>
-                <h3>TamuHack “Envision the Unexpected, Vision Map”</h3>
-                <ul>
-                    <li>Incorporated Google Map API to calculate the safest pathway using historical accidents dataset</li>
-                    <li>Implemented algorithms in JavaScript to visualize optimal paths, location and time of the accidents</li>
-                </ul>
-            </section>
-        </article>
-    
-    </main>
-</body>
+<html>
+   <link rel="stylesheet" type="text/css" href="./styles.css">
+   <style>
+      .float_menu {
+      width: auto;
+      text-align: center;
+      background-size: 100% 100%;
+      }
+   </style>
+   <head>
+      <title>Duo (Steve) Wang's Personal Website</title>
+   </head>
+   <body>
+      <button onclick="dark_mode()" class="button">Click to change theme color</button>
+      <script> function dark_mode() {
+         document.body.classList.toggle("dark-mode");
+         if(document.body.classList.contains('dark-mode')){ //when the body has the class 'dark' currently
+               localStorage.setItem('darkMode', 'enabled'); //store this data if dark mode is on
+         } else {
+               localStorage.setItem('darkMode', 'disabled'); //store this data if dark mode is off
+         }
+         
+         };
+         if(localStorage.getItem('darkMode') == 'enabled'){
+            document.body.classList.toggle('dark-mode');
+         }; 
+      </script>      
+      <div class="header">
+         <h1>Duo (Steve) Wang's Personal Website</h1>
+         <h2>Howdy!!! My name is Duo Wang and I go by Steve. I am an outgoing person and I love to lead people from different backgrounds. I prefer the name Steve since I admire Steve Jobs. I want to be as successful as him so I'm always thriving in my classes and my internships. Take a look at my other tabs! I think you will find me quite interesting and possibly a good fit for certain positions at your company.</h2>
+      </div>
+      <div class="float_menu">
+         <nav>
+            <ul id="nav-list">
+               <li><a href="index.html"><b>Home</b></a></li>
+               <li><a href="portfolio.html"><b>Portfolio</b></a></li>
+               <li><a href="qualifications.html"><b>Qualifications</b></a></li>
+               <li><a href="service.html"><b>Service</a></b></li>
+            </ul>
+         </nav>
+         <img class="image" src="asdasdasdasd.JPG" alt="Example image" width="80%" />
+      </div>
+   </body>
 </html>
